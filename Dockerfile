@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Copy requirements file and install dependencies
 COPY streamlit_requirements.txt .
-RUN pip install --no-cache-dir -r streamlit_requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
 COPY app.py .
