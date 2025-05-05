@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
-COPY app.py .
+COPY main.py .
 
 # Create a non-root user for security
 RUN adduser --disabled-password --gecos "" appuser
@@ -22,4 +22,4 @@ ENV API_URL=http://backend:8000
 EXPOSE 8501
 
 # Command to run the application
-CMD streamlit run app.py --server.port=$PORT --server.address=$HOST
+CMD streamlit run main.py --server.port=$PORT --server.address=$HOST
