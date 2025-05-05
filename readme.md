@@ -16,7 +16,7 @@ This project demonstrates how to build and deploy a FastAPI application to Digit
 Deploy this application to DigitalOcean App Platform in just 3 simple steps:
 
 1. Fork this repository to your GitHub account
-2. Sign up for DigitalOcean using my [referral link](https://m.do.co/c/myrefcode) to get $200 in credits
+2. Sign up for DigitalOcean using my [referral link](https://m.do.co/c/eddc62174250) to get $200 in credits
 3. Use DigitalOcean's point-and-click interface to deploy:
    - Go to [DigitalOcean App Platform](https://cloud.digitalocean.com/apps)
    - Click "Create App" → Select GitHub → Choose this repository
@@ -131,7 +131,7 @@ Once deployed, your API documentation will be available at:
 
 If you find this project helpful, please consider:
 
-1. Signing up for DigitalOcean using my [referral link](https://m.do.co/c/myrefcode)
+1. Signing up for DigitalOcean using my [referral link](https://m.do.co/c/eddc62174250)
 2. Starring this repository on GitHub
 3. Sharing it with others who might benefit
 
