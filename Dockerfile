@@ -3,23 +3,23 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY streamlit_requirements.txt .
+RUN pip install --no-cache-dir -r streamlit_requirements.txt
 
 # Copy the application code
-COPY . .
+COPY app.py .
 
 # Create a non-root user for security
 RUN adduser --disabled-password --gecos "" appuser
 USER appuser
 
 # Set environment variables
-ENV PORT=8000
+ENV PORT=8501
 ENV HOST=0.0.0.0
+ENV API_URL=http://backend:8000
 
 # Expose the port the app will run on
-EXPOSE 8000
+EXPOSE 8501
 
 # Command to run the application
-CMD gunicorn --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT main:app
-
+CMD streamlit run app.py --server.port=$PORT --server.address=$HOST
